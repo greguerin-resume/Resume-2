@@ -1,0 +1,173 @@
+<!-- index.html  ––  Gary Reguerin – Enterprise Architect Portfolio -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gary Reguerin – Enterprise Architect</title>
+
+  <style>
+    :root{
+      --bg:#fff;
+      --fg:#111;
+      --muted:#777;
+      --accent:#000;
+      --max:860px;
+      --mono:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+      background:var(--bg);
+      color:var(--fg);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border .2s;}
+    a:hover{border-color:var(--accent);}
+    header{
+      padding:4rem 1.5rem 2rem;
+      text-align:center;
+      border-bottom:1px solid #eaeaea;
+    }
+    header h1{font-size:2.2rem;font-weight:700;}
+    header p{margin:.3rem 0;color:var(--muted);}
+    nav{
+      display:flex;justify-content:center;gap:1.5rem;
+      padding:1.2rem 1rem;font-size:.9rem;font-family:var(--mono);
+    }
+    section{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:3rem 1.5rem;
+    }
+    h2{
+      font-size:1.4rem;font-weight:600;margin-bottom:1.2rem;
+      border-left:3px solid var(--accent);padding-left:.7rem;
+    }
+    .role{margin-bottom:2.2rem;}
+    .role h3{font-size:1.1rem;font-weight:600;}
+    .role .meta{font-size:.85rem;color:var(--muted);margin-bottom:.6rem;font-family:var(--mono);}
+    ul{margin-left:1.2rem;}
+    .skills{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.6rem;}
+    .skills li{
+      list-style:none;font-size:.8rem;font-family:var(--mono);
+      background:#f5f5f5;padding:.2rem .5rem;border-radius:3px;
+    }
+    form{display:grid;gap:1rem;}
+    input,textarea{
+      width:100%;padding:.7rem 1rem;border:1px solid #ccc;border-radius:4px;font:inherit;
+    }
+    button{
+      justify-self:start;background:var(--accent);color:var(--bg);
+      border:none;padding:.7rem 1.4rem;font:inherit;border-radius:4px;cursor:pointer;
+    }
+    button:hover{opacity:.9;}
+    footer{
+      text-align:center;padding:3rem 1rem 4rem;font-size:.8rem;color:var(--muted);
+    }
+    @media(max-width:600px){
+      header h1{font-size:1.7rem;}
+      nav{gap:1rem;font-size:.8rem;}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Gary Reguerin</h1>
+    <p>Lead Enterprise Architect · 40+ yrs delivering secure, cloud-native solutions</p>
+    <p>AWS | Zero-Trust | FISMA | TOGAF</p>
+  </header>
+
+  <nav>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="experience">
+    <h2>Selected Experience</h2>
+
+    <div class="role">
+      <h3>Lead Enterprise Architect – HHS/ACF</h3>
+      <div class="meta">TCG, Inc. | Oct 2023 – Present</div>
+      <ul>
+        <li>Steer secure AWS migrations aligned to Zero-Trust Architecture & HHS Federated EA.</li>
+        <li>Authored enterprise-wide Application Modernization Guidelines—quantified cost/effort savings via shared ZTA-compliant infrastructure.</li>
+        <li>Built decision matrix (Rehost vs Re-platform vs Refactor) adopted by 20+ system owners.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <h3>Enterprise Architect – CBP Point-of-Sale Modernization</h3>
+      <div class="meta">CACI / Unisys | Mar 2018 – Jul 2023</div>
+      <ul>
+        <li>Modernized legacy fee-collection system spanning 500+ registers at 140+ U.S. ports of entry.</li>
+        <li>Integrated COTS POS with Amazon MQ, SAML auth, & automated FISMA audit trails (Splunk/CrowdStrike).</li>
+        <li>Delivered full cloud-feasibility study—Lift-and-Shift vs containerized vs hybrid—resulting in AWS pilot.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <h3>Sr. Enterprise Architect – CBP Passenger Systems</h3>
+      <div class="meta">WISSE Corp. | Oct 2002 – Mar 2018</div>
+      <ul>
+        <li>Enabled FedRAMP-compliant cloud adoption & Agile transformation across 8 PSPD applications.</li>
+        <li>Led application-rationalization initiative that retired 30% of portfolio, saving $3.2 M annual licensing.</li>
+        <li>Designed TOGAF-based EA meta-model incorporating FISMA controls; tracked via MS Access repository.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Core Skills</h2>
+    <ul class="skills">
+      <li>Enterprise Architecture (15 yrs)</li>
+      <li>AWS (7 yrs)</li>
+      <li>Zero-Trust Architecture</li>
+      <li>FISMA / NIST 800-53</li>
+      <li>TOGAF</li>
+      <li>SQL (15 yrs)</li>
+      <li>Oracle / SQL Server / MySQL</li>
+      <li>Data Warehousing</li>
+      <li>Jira & Confluence</li>
+      <li>MS Project / Visio</li>
+      <li>ITIL v3</li>
+      <li>Agile / Scrum</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Get In Touch</h2>
+    <!-- Replace YOUR_FORM_ID with the hash Formspree gives you after signup -->
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="_replyto" placeholder="Email" required />
+      <textarea name="message" rows="5" placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p style="margin-top:1rem;font-size:.8rem;color:var(--muted);">
+      Or reach me directly at <a href="mailto:gary.reguerin@email.com">gary.reguerin@email.com</a>
+    </p>
+  </section>
+
+  <footer>
+    © <span id="yr"></span> Gary Reguerin · Built for GitHub Pages
+  </footer>
+
+  <script>
+    // tiny scroll-spy for nav highlight
+    const nav=document.querySelectorAll('nav a');
+    const sec=[...document.querySelectorAll('section')].map(s=>s.offsetTop);
+    window.addEventListener('scroll',()=>{
+      let top=window.scrollY+120;
+      sec.forEach((s,i)=>{
+        if(top>=s) nav.forEach(a=>a.classList.remove('active'));
+        if(top>=s) nav[i].classList.add('active');
+      });
+    });
+    document.getElementById('yr').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
