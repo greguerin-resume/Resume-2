@@ -1,17 +1,18 @@
-<!-- index.html  ––  Gary Reguerin – Enterprise Architect Portfolio -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gary Reguerin – Enterprise Architect</title>
 
   <style>
     :root{
-      --bg:#fff;
-      --fg:#111;
-      --muted:#777;
-      --accent:#000;
+      --bg:#f7fdfc;        /* pastel-mint off-white */
+      --card:#ffffff;
+      --fg:#222;
+      --muted:#5c6c6b;
+      --accent:#007a70;    /* calm teal */
+      --border:#d6ece9;
       --max:860px;
       --mono:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
     }
@@ -20,7 +21,7 @@
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
       background:var(--bg);
       color:var(--fg);
-      line-height:1.6;
+      line-height:1.65;
       -webkit-font-smoothing:antialiased;
     }
     a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border .2s;}
@@ -28,13 +29,16 @@
     header{
       padding:4rem 1.5rem 2rem;
       text-align:center;
-      border-bottom:1px solid #eaeaea;
+      background:var(--card);
+      border-bottom:1px solid var(--border);
     }
     header h1{font-size:2.2rem;font-weight:700;}
     header p{margin:.3rem 0;color:var(--muted);}
     nav{
       display:flex;justify-content:center;gap:1.5rem;
       padding:1.2rem 1rem;font-size:.9rem;font-family:var(--mono);
+      background:var(--card);border-bottom:1px solid var(--border);
+      position:sticky;top:0;z-index:10;
     }
     section{
       max-width:var(--max);
@@ -43,23 +47,25 @@
     }
     h2{
       font-size:1.4rem;font-weight:600;margin-bottom:1.2rem;
-      border-left:3px solid var(--accent);padding-left:.7rem;
+      border-left:4px solid var(--accent);padding-left:.7rem;
     }
-    .role{margin-bottom:2.2rem;}
-    .role h3{font-size:1.1rem;font-weight:600;}
-    .role .meta{font-size:.85rem;color:var(--muted);margin-bottom:.6rem;font-family:var(--mono);}
-    ul{margin-left:1.2rem;}
+    .job{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:1.5rem;margin-bottom:2rem;}
+    .job h3{font-size:1.15rem;font-weight:600;}
+    .meta{font-size:.85rem;color:var(--muted);margin:.3rem 0 .8rem;font-family:var(--mono);}
+    ul{margin-left:1.3rem;margin-top:.4rem;}
+    li{margin-bottom:.25rem;}
     .skills{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.6rem;}
     .skills li{
       list-style:none;font-size:.8rem;font-family:var(--mono);
-      background:#f5f5f5;padding:.2rem .5rem;border-radius:3px;
+      background:var(--bg);padding:.25rem .6rem;border-radius:4px;border:1px solid var(--border);
     }
-    form{display:grid;gap:1rem;}
+    form{display:grid;gap:1rem;margin-top:1rem;}
     input,textarea{
-      width:100%;padding:.7rem 1rem;border:1px solid #ccc;border-radius:4px;font:inherit;
+      width:100%;padding:.7rem 1rem;border:1px solid var(--border);border-radius:4px;font:inherit;
+      background:var(--card);
     }
     button{
-      justify-self:start;background:var(--accent);color:var(--bg);
+      justify-self:start;background:var(--accent);color:#fff;
       border:none;padding:.7rem 1.4rem;font:inherit;border-radius:4px;cursor:pointer;
     }
     button:hover{opacity:.9;}
@@ -76,8 +82,8 @@
 <body>
   <header>
     <h1>Gary Reguerin</h1>
-    <p>Lead Enterprise Architect · 40+ yrs delivering secure, cloud-native solutions</p>
-    <p>AWS | Zero-Trust | FISMA | TOGAF</p>
+    <p>Lead Enterprise Architect &nbsp;|&nbsp; 40+ yrs Cloud & Zero-Trust Solutions</p>
+    <p>AWS • Azure • TOGAF • FISMA • ZTA</p>
   </header>
 
   <nav>
@@ -86,45 +92,82 @@
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- EXPERIENCE -->
   <section id="experience">
-    <h2>Selected Experience</h2>
+    <h2>Experience & Impact</h2>
 
-    <div class="role">
+    <!-- TCG -->
+    <div class="job">
       <h3>Lead Enterprise Architect – HHS/ACF</h3>
-      <div class="meta">TCG, Inc. | Oct 2023 – Present</div>
+      <div class="meta">TCG, Inc. &nbsp;|&nbsp; Oct 2023 – Present</div>
+
+      <h4 style="margin-top:1rem;font-size:1rem;font-weight:600;">Responsibilities</h4>
       <ul>
-        <li>Steer secure AWS migrations aligned to Zero-Trust Architecture & HHS Federated EA.</li>
-        <li>Authored enterprise-wide Application Modernization Guidelines—quantified cost/effort savings via shared ZTA-compliant infrastructure.</li>
-        <li>Built decision matrix (Rehost vs Re-platform vs Refactor) adopted by 20+ system owners.</li>
+        <li>Managed Enterprise & Solution Architecture team coordinating secure AWS migration aligned to Zero-Trust Architecture (ZTA).</li>
+        <li>Facilitated design reviews with executive IT teams to ensure strategic alignment and approval gates.</li>
+        <li>Tracked tasks via Confluence & Jira; collected technical requirements; led Analysis-of-Alternatives for AWS & 3rd-party services.</li>
+        <li>Verified compliance with Enterprise Technical Architecture, ZTA functions, Well-Architected Framework pillars.</li>
+      </ul>
+
+      <h4 style="margin-top:1rem;font-size:1rem;font-weight:600;">Accomplishments</h4>
+      <ul>
+        <li>Authored enterprise-wide <strong>Application Modernization Guidelines</strong> illustrating cost/effort savings by leveraging pre-built ZTA-compliant infrastructure.</li>
+        <li>Built a <strong>cloud-migration decision table</strong> (Rehost / Re-platform / Refactor) adopted by 20+ system owners.</li>
+        <li>Achieved clear line-of-sight between AWS services, FISMA controls, and Well-Architected Framework principles.</li>
       </ul>
     </div>
 
-    <div class="role">
-      <h3>Enterprise Architect – CBP Point-of-Sale Modernization</h3>
-      <div class="meta">CACI / Unisys | Mar 2018 – Jul 2023</div>
+    <!-- CACI / Unisys -->
+    <div class="job">
+      <h3>Enterprise Architect – CBP Border Enforcement Modernization</h3>
+      <div class="meta">CACI Federal / Unisys &nbsp;|&nbsp; Mar 2018 – Jul 2023</div>
+
+      <h4 style="margin-top:1rem;font-size:1rem;font-weight:600;">Responsibilities</h4>
       <ul>
-        <li>Modernized legacy fee-collection system spanning 500+ registers at 140+ U.S. ports of entry.</li>
-        <li>Integrated COTS POS with Amazon MQ, SAML auth, & automated FISMA audit trails (Splunk/CrowdStrike).</li>
-        <li>Delivered full cloud-feasibility study—Lift-and-Shift vs containerized vs hybrid—resulting in AWS pilot.</li>
+        <li>Oversaw architecture, integration, security, audits, documentation for COTS Point-of-Sale solution modernizing legacy fee-collection.</li>
+        <li>Configured, patched, tested COTS across dev / test / training / prod environments in CBP data-centres & AWS.</li>
+        <li>Built interfaces via Amazon MQ & vendor APIs; implemented SAML auth & role-based authorisation.</li>
+        <li>Established automated user-activity auditing (Splunk, CrowdStrike); conducted FISMA security reviews & POAM management.</li>
+        <li>Authored System Design, SSP, DR Plan, interface specs, reliability reports; evaluated lift-and-shift vs container vs hybrid cloud paths.</li>
+      </ul>
+
+      <h4 style="margin-top:1rem;font-size:1rem;font-weight:600;">Accomplishments</h4>
+      <ul>
+        <li>Modernised 500+ cash registers at 140+ U.S. ports of entry, improving availability & auditability.</li>
+        <li>Integrated & secured COTS across CBP enclaves and AWS pilot, enabling seamless cloud migration.</li>
+        <li>Delivered automated auditing & FISMA-compliant controls, reducing manual scan overhead by 70%.</li>
       </ul>
     </div>
 
-    <div class="role">
+    <!-- WISSE -->
+    <div class="job">
       <h3>Sr. Enterprise Architect – CBP Passenger Systems</h3>
-      <div class="meta">WISSE Corp. | Oct 2002 – Mar 2018</div>
+      <div class="meta">WISSE Corp. &nbsp;|&nbsp; Oct 2002 – Mar 2018</div>
+
+      <h4 style="margin-top:1rem;font-size:1rem;font-weight:600;">Responsibilities</h4>
       <ul>
-        <li>Enabled FedRAMP-compliant cloud adoption & Agile transformation across 8 PSPD applications.</li>
-        <li>Led application-rationalization initiative that retired 30% of portfolio, saving $3.2 M annual licensing.</li>
-        <li>Designed TOGAF-based EA meta-model incorporating FISMA controls; tracked via MS Access repository.</li>
+        <li>Supported migration to FedRAMP-compliant commercial cloud; defined container-ready criteria.</li>
+        <li>Aligned PSPD technology strategy with enterprise goals; enabled Agile transformation of CBP lifecycle.</li>
+        <li>Conducted application rationalisation; led EA meta-model development using TOGAF & FISMA controls.</li>
+        <li>Maintained MS Access repository for legacy-requirement tracking; facilitated reference-model reviews.</li>
+      </ul>
+
+      <h4 style="margin-top:1rem;font-size:1rem;font-weight:600;">Accomplishments</h4>
+      <ul>
+        <li>Achieved $3.2 M annual savings by retiring 30% of redundant applications.</li>
+        <li>Delivered FedRAMP cloud foundation that now hosts 8 CBP passenger systems.</li>
+        <li>Established TOGAF-based EA repository still in use for authority-to-operate packages.</li>
       </ul>
     </div>
   </section>
 
+  <!-- SKILLS -->
   <section id="skills">
     <h2>Core Skills</h2>
     <ul class="skills">
       <li>Enterprise Architecture (15 yrs)</li>
       <li>AWS (7 yrs)</li>
+      <li>Azure (2 yrs)</li>
       <li>Zero-Trust Architecture</li>
       <li>FISMA / NIST 800-53</li>
       <li>TOGAF</li>
@@ -138,17 +181,17 @@
     </ul>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact">
     <h2>Get In Touch</h2>
-    <!-- Replace YOUR_FORM_ID with the hash Formspree gives you after signup -->
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="text" name="name" placeholder="Name" required />
-      <input type="email" name="_replyto" placeholder="Email" required />
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="_replyto" placeholder="Email" required>
       <textarea name="message" rows="5" placeholder="Message" required></textarea>
-      <button type="submit">Send</button>
+      <button type="submit">Send Message</button>
     </form>
     <p style="margin-top:1rem;font-size:.8rem;color:var(--muted);">
-      Or reach me directly at <a href="mailto:gary.reguerin@email.com">gary.reguerin@email.com</a>
+      Or email directly: <a href="mailto:gary.reguerin@email.com">gary.reguerin@email.com</a>
     </p>
   </section>
 
@@ -157,7 +200,7 @@
   </footer>
 
   <script>
-    // tiny scroll-spy for nav highlight
+    /* tiny scroll-spy + current year */
     const nav=document.querySelectorAll('nav a');
     const sec=[...document.querySelectorAll('section')].map(s=>s.offsetTop);
     window.addEventListener('scroll',()=>{
